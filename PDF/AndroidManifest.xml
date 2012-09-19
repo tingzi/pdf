@@ -1,0 +1,58 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zjt.pdf"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.INTERNET">
+	</uses-permission>
+	<!--添加以下两个可选权限，用于支持特殊的广告形式-->
+	<uses-permission
+		android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+	</uses-permission>
+	<uses-permission
+		android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS">
+	</uses-permission>
+    
+    <application
+        android:icon="@drawable/system_file_manager"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" 
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:configChanges="keyboard|keyboardHidden|orientation"
+			android:name="net.youmi.android.appoffers.YoumiOffersActivity" >
+		</activity>
+        
+        <receiver android:name=".FileReceiver"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        
+        <service android:name=".FileService"/>
+    </application>
+
+</manifest>

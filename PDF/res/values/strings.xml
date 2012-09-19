@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">PDFManager</string>
+    <string name="menu_settings">Scanning</string>
+    <string name="title_activity_main">PDFManager</string>
+	<string name="text1">Scanning</string>
+	<string name="text2">0</string>
+	<string name="text3">files</string>
+	<string name="text4">Find</string>
+	<string name="text5">0</string>
+	<string name="text6">pdf files</string>
+</resources>

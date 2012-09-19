@@ -1,0 +1,12 @@
+<resources xmlns:android="http://schemas.android.com/zpk/res/android">
+
+    <string name="app_name">PDFManager</string>
+    <string name="menu_settings">扫描</string>
+    <string name="title_activity_main">"PDF管理器"</string>
+	<string name="text1">"已扫描"</string>
+	<string name="text2">0</string>
+	<string name="text3">"个文件"</string>
+	<string name="text4">"找到"</string>
+	<string name="text5">0</string>
+	<string name="text6">"个pdf文件"</string>
+</resources>
